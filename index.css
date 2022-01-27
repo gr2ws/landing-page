@@ -7,3 +7,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap'); /* 'Dongle' */
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap'); /* 'Staatliches' */
+
+h1,
+h2, 
+h3 {
+    font-family: 'Staatliches', sans-serif;
+}
+
+p, 
+a, 
+li,
+button {
+    font-family: 'Dongle', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    font-size: clamp(3rem, 5vw, 5vw);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1.5rem, 3.5vw, 4.5vw);
+}
+
+main h1 {
+    font-size: clamp(3rem, 3.5vw, 4vw);
+}
+
+main p {
+    font-size: clamp(1.5rem, 2.5vw, 3.5vw);
+}
+
+main button {
+    font-size: clamp(1.3rem, 2vw, 3vw);
+}
+
+/* ##### Layout ##### */
+
+header {
+    display: flex;
+    display: row nowrap;
+    padding: 0vw 5vw 0vw 5vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-list {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
