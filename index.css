@@ -2,10 +2,9 @@
 
 /* ##### Variables ##### */
 
-* {
-    box-sizing: border-box;
-    overflow-x: hidden
-}
+* { box-sizing: border-box; }
+
+body { overflow-x: hidden }
 
 /* ##### Typography ##### */
 
@@ -33,39 +32,67 @@ ul {
 }
 
 header h2 {
-    font-size: clamp(3rem, 5vw, 5vw);
+    font-size: clamp(1.5rem, 3vw, 3vw);
 }
 
 header a {
     text-decoration: none;
     color: black;
-    font-size: clamp(1.5rem, 3.5vw, 4.5vw);
+    font-size: clamp(1rem, 1.3vw, 1.3vw);
 }
 
 main h1 {
-    font-size: clamp(3rem, 3.5vw, 4vw);
+    font-size: clamp(1.5rem, 4vw, 4vw);
 }
 
 main p {
-    font-size: clamp(1.3rem, 2vw, 3vw);
+    font-size: clamp(1.2rem, 1.5vw, 2vw);
+    text-align: justify;
 }
 
 main button {
-    font-size: clamp(1.3rem, 2vw, 3vw);
+    font-size: clamp(1.2rem, 1.5vw, 2vw)
 }
 
 /* ##### Layout ##### */
 
+body {
+    margin: auto;
+}
+
 header {
     display: flex;
     display: row nowrap;
-    padding: 0vw 5vw 0vw 5vw;
+    padding: 2.5vw 5vw;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
+    background-color: grey;
+    height: clamp(4rem, 4vw, 4vw);
 }
 
 .link-list {
     display: flex;
     align-items: center;
-    gap: 2vw;
+    gap: 3.5vw;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+}
+
+.main-overlay {
+    padding: 3vw 5vw;
+    height: clamp(300px, 25vw, 30vw);
+    width: 100vw;
+}
+
+main img {
+    height: clamp(300px, 25vw, 30vw);
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
 }
