@@ -32,26 +32,26 @@ ul {
 }
 
 header h2 {
-    font-size: clamp(1.5rem, 3vw, 3vw);
+    font-size: 2.3rem; 
 }
 
 header a {
     text-decoration: none;
     color: black;
-    font-size: clamp(1rem, 1.3vw, 1.3vw);
+    font-size: 1.15rem;
 }
 
 main h1 {
-    font-size: clamp(1.5rem, 4vw, 4vw);
+    font-size: 3rem;
 }
 
 main p {
-    font-size: clamp(1.2rem, 1.5vw, 2vw);
+    font-size: 1.4rem;
     text-align: justify;
 }
 
 main button {
-    font-size: clamp(1.2rem, 1.5vw, 2vw)
+    font-size: 1.2rem;
 }
 
 /* ##### Layout ##### */
@@ -68,7 +68,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: grey;
-    height: clamp(4rem, 4vw, 4vw);
+    height: 3rem;
 }
 
 .link-list {
@@ -81,16 +81,17 @@ main {
     display: flex;
     flex-flow: column nowrap;
     margin: auto;
+    height: 25vw;
 }
 
 .main-overlay {
     padding: 3vw 5vw;
-    height: clamp(300px, 25vw, 30vw);
+    height: 25vw;
     width: 100vw;
 }
 
 main img {
-    height: clamp(300px, 25vw, 30vw);
+    height: 25vw;
     width: 100vw;
     object-fit: cover;
     position: absolute;
