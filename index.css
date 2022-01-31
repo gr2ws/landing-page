@@ -15,21 +15,17 @@ body { overflow-x: hidden; }
 
 /* ##### Typography ##### */
 
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap'); /* 'Dongle' */
-
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap'); /* 'Staatliches' */
-
 h1,
 h2, 
 h3 {
-    font-family: 'Staatliches', sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 p, 
 a, 
 li,
 button {
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 ul {
@@ -98,6 +94,7 @@ main button {
 footer a, p {
     text-decoration: none;
     font-size: 1.3rem;
+    font-family: Verdana, sans-serif;
 }
 
 /* ##### Colors ##### */
