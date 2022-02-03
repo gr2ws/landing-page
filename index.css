@@ -299,4 +299,21 @@ header h2 {
     gap: .09vw;
 }
 
+.l,
+.of,
+.g,
+.ol {
+    transition: all .1s ease-in-out 0s;
+    cursor: default;
+}
+
+.l:hover,
+.of:hover,
+.g:hover,
+.ol:hover {
+    transform: scale(1.5) translateY(-0.3vw);
+    text-shadow: 3px 3px 1px var(--sd);
+    z-index: 1;
+}
+
 /* ##### END ##### */
