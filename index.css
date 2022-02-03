@@ -295,7 +295,8 @@ footer {
 button {
     border: 1.5px solid var(--sd);
     border-radius: 10px;
-    padding: 1vw 2vw;
+    text-align: center;
+    padding: .1vw 2vw .3vw 2vw;
 }
 
 /* ##### Animations ##### */
@@ -371,7 +372,20 @@ header ul>li:last-child:hover::before {
     width: 10ch;
 }
 
+/* ##### Buttons ##### */
 
+button {
+    transition: all .1s ease;
+}
 
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px var(--sd);
+    color: hsl(144, 89%, 85%);
+    background-color: var(--bg);
+    text-shadow: var(--hl) 0px 0px 5px;
+    border: solid 2px var(--tx);
+    font-weight: 600;
+}
 
 /* ##### END ##### */
