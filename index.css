@@ -15,6 +15,14 @@ body { overflow-x: hidden;}
 
 /* ##### Typography ##### */
 
+h1, h2, h3, p, li {
+    cursor: default;
+}
+
+a, button {
+    cursor: pointer;
+}
+
 h1,
 h2, 
 h3 {
@@ -41,6 +49,7 @@ header h2 {
 header a {
     text-decoration: none;
     font-size: 1.15rem;
+    font-weight: 600;
 }
 
 main h1 {
@@ -312,8 +321,57 @@ header h2 {
 .g:hover,
 .ol:hover {
     transform: scale(1.5) translateY(-0.3vw);
-    text-shadow: 3px 3px 1px var(--sd);
+    color: hsl(144, 89%, 85%);
+    text-shadow: 0px 0px 5px var(--hl);
     z-index: 1;
+    margin: 0px 2px 0px 2px;
 }
+
+.l:hover {
+    margin: 0px 2px 0px 0px;
+}
+
+header ul li::before {
+    transition: all .15s ease-out .01s;
+}
+
+header ul li, header ul li a {
+    transition: all .15s ease-out;
+}
+
+header li::before {
+    content: "";
+    position: absolute;
+    background-color: var(--tx);
+    height: 3px;
+    width: 0ch;
+    border-radius: 20px;
+    margin: 25px 0px 0px 0px;
+    box-shadow: var(--hl) 2px 2px 3px;
+}
+
+header ul>li:last-child::before {
+    width: 0ch;
+}
+
+header ul li:hover, 
+header ul li a:hover {
+    color: var(--tx);
+    transform: scale(1.2) translateY(-1.6px);
+    text-shadow: 2px 2px 3px var(--hl);
+    color: hsl(144, 89%, 85%);
+}
+
+header li:hover::before {
+    width: 8.5ch;
+    background-color: hsl(144, 89%, 85%);
+}
+
+header ul>li:last-child:hover::before {
+    width: 10ch;
+}
+
+
+
 
 /* ##### END ##### */
