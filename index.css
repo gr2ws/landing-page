@@ -61,7 +61,7 @@ main p {
     text-align: justify;
 }
 
-main button {
+main button p {
     font-size: 1.2rem;
 }
 
@@ -96,7 +96,7 @@ main button {
     font-size: 1.1rem;
 }
 
-.call button {
+.call button p {
     font-size: 1.2rem;
 }
 
@@ -106,13 +106,17 @@ footer a, p {
     font-family: Verdana, sans-serif;
 }
 
+button p {
+    font-weight: 600;
+}
+
 /* ##### Colors ##### */
 
 header,
 .photo-gallery,
 .call,
 .gallery-container>div,
-button {
+button  {
     background-color: var(--bg);
 }
 
@@ -124,11 +128,11 @@ footer,
 
 p, 
 a, 
-li, 
-button, 
+li,  
 h1, 
 h2, 
-h3 {
+h3, 
+.call button p {
     color: var(--tx);
     text-shadow: var(--sd) 2px 2px 2px;
 }
@@ -296,7 +300,16 @@ button {
     border: 1.5px solid var(--sd);
     border-radius: 10px;
     text-align: center;
-    padding: .1vw 2vw .3vw 2vw;
+    padding: .5vw 2vw .5vw 2vw;
+}
+
+.main button {
+    position: absolute;
+}
+
+button p {
+    padding: 0;
+    margin: 0;
 }
 
 /* ##### Animations ##### */
@@ -358,7 +371,7 @@ header ul>li:last-child::before {
 header ul li:hover, 
 header ul li a:hover {
     color: var(--tx);
-    transform: scale(1.2) translateY(-1.6px);
+    transform: scale(1.1) translateY(-1.5px);
     text-shadow: 2px 2px 3px var(--hl);
     color: hsl(144, 89%, 85%);
 }
@@ -375,22 +388,23 @@ header ul>li:last-child:hover::before {
 /* ##### Buttons ##### */
 
 button {
-    transition: all .1s ease;
+    transition: all 0.05s ease;
 }
 
 button:hover {
-    transform: scale(1.1);
     box-shadow: 3px 3px 5px var(--sd);
     color: hsl(144, 89%, 85%);
-    background-color: var(--bg);
+    background-color: var(--sd);
     text-shadow: var(--hl) 0px 0px 5px;
-    border: solid 2px var(--tx);
+    border: solid 1px var(--tx);
 }
+
 
 /* ##### Footer ##### */
 
 footer p a {
-    transition: all .3s ease ;
+    transition: all .1s ease-in;
+    text-decoration: underline;
 }
 
 footer a:hover {
@@ -399,26 +413,6 @@ footer a:hover {
     z-index: 1;
 }
 
-footer p a:first-of-type::before, 
-footer p a:last-of-type::before {
-    content: "";
-    position: absolute;
-    background-color: var(--sd);
-    height: 3px;
-    margin-top: 25.8px;
-    width: 17.7ch;
-    border-radius: 20px;
-    box-shadow: none;
-    transition: all .2s ease;
-}
-
-footer p a:last-of-type::before {
-    width: 3.9ch;
-}
-
-footer p a:first-of-type:hover::before,
-footer p a:last-of-type:hover::before {
-    opacity: 0;
-}
+/* ##### Pictures ##### */
 
 /* ##### END ##### */
