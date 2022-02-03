@@ -385,7 +385,40 @@ button:hover {
     background-color: var(--bg);
     text-shadow: var(--hl) 0px 0px 5px;
     border: solid 2px var(--tx);
-    font-weight: 600;
+}
+
+/* ##### Footer ##### */
+
+footer p a {
+    transition: all .3s ease ;
+}
+
+footer a:hover {
+    color: hsl(144, 89%, 85%);
+    text-shadow: 0px 0px 5px var(--tx);
+    z-index: 1;
+}
+
+footer p a:first-of-type::before, 
+footer p a:last-of-type::before {
+    content: "";
+    position: absolute;
+    background-color: var(--sd);
+    height: 3px;
+    margin-top: 25.8px;
+    width: 17.7ch;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: all .2s ease;
+}
+
+footer p a:last-of-type::before {
+    width: 3.9ch;
+}
+
+footer p a:first-of-type:hover::before,
+footer p a:last-of-type:hover::before {
+    opacity: 0;
 }
 
 /* ##### END ##### */
