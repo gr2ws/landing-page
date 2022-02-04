@@ -19,7 +19,7 @@ h1, h2, h3, p, li {
     cursor: default;
 }
 
-a, button {
+a, button, button p {
     cursor: pointer;
 }
 
@@ -393,12 +393,14 @@ button {
 
 button:hover {
     box-shadow: 3px 3px 5px var(--sd);
-    color: hsl(144, 89%, 85%);
     background-color: var(--sd);
-    text-shadow: var(--hl) 0px 0px 5px;
     border: solid 1px var(--tx);
 }
 
+button:hover > p {
+    text-shadow: var(--hl) 1px 1px 5px;
+    color: hsl(144, 89%, 85%);
+}
 
 /* ##### Footer ##### */
 
