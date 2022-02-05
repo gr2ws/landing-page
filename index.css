@@ -231,18 +231,23 @@ main .img {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 2vw;
+    justify-content: space-evenly;
+    padding: 1vw;
     border-radius: 20px;
     border: 3px solid var(--sd);
     box-shadow: 0px 0px 10px var(--sd);
 }
 
 .gallery-container div img {
-    width: 100%;
+    width: clamp(200px, 16vw, 16vw);
     height: clamp(150px, 15vw, 15vw);
     object-fit: cover;
     border-radius: 20px;
+}
+
+.gallery-container div p {
+    height: 20%;
+    width: 17vw;
 }
 
 .quote {
@@ -360,12 +365,8 @@ header li::before {
     height: 3px;
     width: 0ch;
     border-radius: 20px;
-    margin: 25px 0px 0px 0px;
+    margin: 25px 0px 0px 0.5px;
     box-shadow: var(--hl) 2px 2px 3px;
-}
-
-header ul>li:last-child::before {
-    width: 0ch;
 }
 
 header ul li:hover, 
@@ -377,12 +378,8 @@ header ul li a:hover {
 }
 
 header li:hover::before {
-    width: 8.5ch;
+    width: 100%;
     background-color: hsl(144, 89%, 85%);
-}
-
-header ul>li:last-child:hover::before {
-    width: 10ch;
 }
 
 /* ##### Buttons ##### */
@@ -402,6 +399,10 @@ button:hover > p {
     color: hsl(144, 89%, 85%);
 }
 
+button:active {
+    transform: scale(0.9);
+}
+
 /* ##### Footer ##### */
 
 footer p a {
@@ -415,6 +416,45 @@ footer a:hover {
     z-index: 1;
 }
 
-/* ##### Pictures ##### */
+/* ##### Pictures - Initial ##### */
+ 
+div.gallery-item>p {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    transition: all .1s ease;
+    font-size: 15px;
+    width: clamp(200px, 16vw, 16vw);
+    height: clamp(150px, 15vw, 15vw);
+    border-radius: 10px;
+    background-color:hsla(189, 6%, 1%, .7);
+    padding: 4vw 2vw 0vw 2vw;
+    text-align: center;
+    border: 3px solid var(--tx) ;
+    text-shadow: 0px 0px 3px var(--tx) ;
+}
+
+div.gallery-item {
+    height: 100%;
+    padding: 1vw;
+    transition: all .2s ease;
+}
+
+div.gallery-item img {
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+div.gallery-item:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    border: var(--tx) 3px solid;
+    background-color: var(--sd);
+}
+
+div.gallery-item:hover > p {
+    opacity: 1;
+    z-index: 1;
+}
 
 /* ##### END ##### */
