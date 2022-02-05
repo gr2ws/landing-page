@@ -43,12 +43,12 @@ ul {
 }
 
 header h2 {
-    font-size: 2.3rem; 
+    font-size: 2.3vw; 
 }
 
 header a {
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 1.4vw;
     font-weight: 600;
 }
 
@@ -196,7 +196,7 @@ main .img {
     width: 100%;
     position: absolute;
     z-index: -1;
-    background: no-repeat center fixed url(pictures/ocean.jpg);
+    background: no-repeat 50% 55% fixed url(pictures/ocean.jpg);
 }
 
 .photo-gallery {
@@ -416,7 +416,7 @@ footer a:hover {
     z-index: 1;
 }
 
-/* ##### Pictures - Initial ##### */
+/* ##### Pictures ##### */
  
 div.gallery-item>p {
     position: absolute;
@@ -457,4 +457,31 @@ div.gallery-item:hover > p {
     z-index: 1;
 }
 
-/* ##### END ##### */
+/* ##### RESPONSIVENESS ##### */
+
+/* ##### Normal Monitors ##### */
+
+@media screen and (min-width: 1550px) {
+
+header { padding: 2vw 5vw; }
+header h2 div { font-size: 2.5vw; }
+header a { font-size: 1.3vw;}
+header li::before { margin: 1.55vw 0px 0px 0.5px; height: .15vw;}
+
+main.main { height: 25vw;}
+
+section.photo-gallery div.gallery-item p { font-size: 1.35rem;}
+
+section.quote { height: 20vw; }
+section.quote div.quote-overlay { height: 20vw; }
+
+section.call { padding: 0vw 5vw; height: 20vw;}
+section.call div.call-container { height: 50%;}
+
+footer.footer { padding: 0.1vw 5vw;}
+
+button { border: var(--sd) .15vw solid; }
+button:hover { border: solid .15vw var(--tx); }
+
+}
+/* ##### END ##### */ 
