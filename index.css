@@ -456,3 +456,27 @@ div.gallery-item:hover > p {
     opacity: 1;
     z-index: 1;
 }
+
+/* ##### For Normal Monitors ##### */
+
+@media screen and (min-width: 1551px) {
+    header {padding: 2vw 5vw;}
+    header h2 div { font-size: 2.5vw;}
+    header a {font-size: 1.3vw;}
+    header li::before { margin: 1.55vw 0px 0px 0.5px; height: .15vw;}
+    
+    main.main {height: 25vw;}
+    
+    section.photo-gallery div.gallery-item p {font-size: 1.35rem;}
+    
+    section.quote {height: 20vw;}
+    section.quote div.quote-overlay {height: 20vw;}
+    
+    section.call {padding: 0vw 5vw; height: 20vw;}
+    section.call div.call-container {height: 50%;}
+    
+    footer.footer {padding: 0.1vw 5vw;}
+    
+    button {border: var(--sd) .15vw solid;}
+    button:hover {border: solid .15vw var(--tx);}
+}
